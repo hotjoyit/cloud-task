@@ -86,4 +86,10 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>reposilite-repository</id>
+			<url>http://localhost:8080/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
