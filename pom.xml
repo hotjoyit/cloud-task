@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.fnf</groupId>
 	<artifactId>cloud-task-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.11</version>
 	<name>cloud-task-app</name>
 	<description>cloud-task-app</description>
 	<properties>
@@ -82,6 +82,25 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>execute-shell-script</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>bash</executable>
+							<arguments>
+								<argument>./scdf-deployment.sh</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
